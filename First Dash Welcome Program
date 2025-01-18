@@ -1,1 +1,16 @@
 
+import pandas as pd
+import plotly.graph_objs as go
+import dash
+import dash_html_components as html
+import dash_core_components as dcc
+
+data = pd.read_csv("gapminder.csv")
+
+print(data.head())
+
+app = dash.Dash()
+app.layout = html.H1(children="MY FIRST DASHBOARD", style={'color':'red','text-align':'center'})
+
+if _name_ == '__main__':
+    app.run_server()
